@@ -30,7 +30,7 @@ def process_message(key, job):
 if __name__ == '__main__':
     dispatcher = Dispatcher(redis_host='redis',
                             process_func=process_message,
-                            channels=['genie:threats'])
+                            queues=['genie:threats'])
     dispatcher.start()
 
 # redis integration testing from ur terminal
